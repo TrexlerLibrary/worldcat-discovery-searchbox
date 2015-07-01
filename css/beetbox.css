@@ -1,0 +1,92 @@
+.beetbox * { box-sizing: border-box; }
+
+.beetbox {
+    border: 1px solid black;
+    border-radius: 10px;
+    /*overflow: hidden;*/
+    padding: 5px;
+    width: 700px;
+}
+
+.bb-nav {
+    width: 100%;
+}
+
+.bb-nav a { text-decoration: none; }
+
+.bb-nav .active {
+    background-color: #e5e5e5;
+}
+.bb-nav .active a {
+    color: #1a4663;
+}
+
+.bb-nav ul {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    margin: 0;
+    padding: 0;
+}
+
+.bb-nav li:first-of-type {
+    border-top-left-radius: 10px;
+}
+
+.bb-nav li {
+    background-color: #1a4663;
+    border: 1px solid #1a4663;
+    border-bottom: 1px solid transparent;
+    display: inline-block;
+    font-size: 18px;
+    margin: 0;
+    padding: 8px;
+}
+
+.bb-nav li a {
+    color: #fff;
+}
+
+.bb-content {
+    background-color: #fff;
+    border: 1px solid #1a4663;
+    display: none;
+    margin-top: -2px;
+    padding: 1em;
+}
+
+.bb-active { display: block; }
+
+.bb-body {    
+    background-color: #e5e5e5;
+    padding: 10px;
+}
+
+.bb-body input[type="text"] {
+    border: 1px solid black;
+    font-family: 'Arial';
+    font-size: 1.2em;
+    font-weight: 100;
+    padding: 5px;
+    width: 75%;
+}
+
+.bb-body input[type="text"]:focus {
+    box-shadow: 0 0 5px 2px lightblue;
+    outline: none;
+}
+
+.bb-btn {
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 15px;
+    line-height: 20px;
+    padding-bottom: 6px;
+    padding-top: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    vertical-align: bottom
+}
+
+.bb-btn-green {
+    background-color: lightgreen;
+}
