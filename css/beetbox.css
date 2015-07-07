@@ -58,7 +58,9 @@
   margin-top: -2px;
 }
 
-.bb-active { display: block; }
+.bb-active { 
+  display: block; 
+}
 
 .bb-body {    
   background-color: #e5e5e5;
@@ -94,13 +96,19 @@
   vertical-align: bottom
 }
 
-.bb-btn-green { background-color: lightgreen; }
-
-.bb-footer {
-  color: #e5e5e5;
+.bb-btn-green { 
+  background-color: lightgreen; 
 }
 
-.bb-footer ol, .bb-footer ul { padding-left: 0; }
+.bb-footer {
+  color: #666;
+  padding: 1em;
+}
+
+.bb-footer ol, .bb-footer ul { 
+  margin: 0;
+  padding: 0; 
+}
 
 .bb-footer li {
   display: inline-block;
@@ -111,13 +119,16 @@
 
 .bb-footer li:not(:last-of-type) {
   border-right: 1px solid black;
-  padding-right: .9em;
 }
 
 .bb-footer a {
   color: #1a4663;
   font-weight: 900;
   text-decoration: none;
+}
+
+.bb-footer a:hover {
+  text-decoration: underline;
 }
 
 .bb-help-text {
