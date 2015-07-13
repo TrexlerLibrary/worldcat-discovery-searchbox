@@ -1,0 +1,49 @@
+/**
+ *  fieldsets
+ */
+
+.bb-field {
+  border: none;
+  padding: 5px 10px;
+}
+
+.bb-field label {
+  cursor: pointer;
+}
+
+/* add some breathing room */
+.bb-field:first-of-type {
+  margin-top: 10px;
+}
+
+/**
+ *  The <legend> tag doesn't seem to take the display adjustments
+ *  too well, so we'll float it to get the alignment we want
+ */
+
+.bb-field-inline legend {
+  display: block;
+  float: left;
+  font-weight: 900;
+  width: 10em;
+}
+
+.bb-field-inline label {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+
+.bb-help-text {
+  color: #003050;
+  display: block;
+  font-weight: 100;
+  padding: .25em;
+}
+
+.bb-search select {
+  display: inline-block;
+  font-size: 25px;
+  margin-bottom: 0;
+  vertical-align: middle;
+}

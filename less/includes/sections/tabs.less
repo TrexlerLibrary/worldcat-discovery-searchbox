@@ -1,0 +1,41 @@
+.bb-nav {
+  width: 100%;
+}
+
+.bb-nav a { 
+  padding-left: .75em;
+  padding-right: .75em;
+  text-decoration: none; 
+}
+
+.bb-nav .active {
+  background-color: @tab-active-bg-color;
+}
+.bb-nav .active a {
+  color: @tab-active-link-color;
+}
+
+.bb-nav ul {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  margin: 0;
+  padding: 0;
+}
+
+.bb-nav li:first-of-type {
+  border-top-left-radius: 10px;
+}
+
+.bb-nav li {
+  background-color: @tab-inactive-bg-color;
+  border: 1px solid @tab-inactive-bg-color;
+  border-bottom: 1px solid transparent;
+  display: inline-block;
+  font-size: 18px;
+  margin: 0;
+  padding: 8px;
+}
+
+.bb-nav li a {
+  color: @tab-inactive-link-color;
+}

@@ -1,42 +1,35 @@
-.beetbox * { 
-  box-sizing: border-box; 
-  font-family: 'Arial', sans-serif;
-}
-
-.beetbox {
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 5px;
-}
-
+/**
+ *  Specific color definitions
+ */
+/**
+ * 
+ */
+/**
+ *  Font definition
+ */
 .bb-nav {
   width: 100%;
 }
-
-.bb-nav a { 
+.bb-nav a {
   padding-left: .75em;
   padding-right: .75em;
-  text-decoration: none; 
+  text-decoration: none;
 }
-
 .bb-nav .active {
   background-color: #e5e5e5;
 }
 .bb-nav .active a {
   color: #1a4663;
 }
-
 .bb-nav ul {
   background-color: #fff;
   border-bottom: 1px solid #ddd;
   margin: 0;
   padding: 0;
 }
-
 .bb-nav li:first-of-type {
   border-top-left-radius: 10px;
 }
-
 .bb-nav li {
   background-color: #1a4663;
   border: 1px solid #1a4663;
@@ -46,29 +39,99 @@
   margin: 0;
   padding: 8px;
 }
-
 .bb-nav li a {
-  color: #fff;
+  color: #e5e5e5;
 }
-
+/**
+ *  fieldsets
+ */
+.bb-field {
+  border: none;
+  padding: 5px 10px;
+}
+.bb-field label {
+  cursor: pointer;
+}
+/* add some breathing room */
+.bb-field:first-of-type {
+  margin-top: 10px;
+}
+/**
+ *  The <legend> tag doesn't seem to take the display adjustments
+ *  too well, so we'll float it to get the alignment we want
+ */
+.bb-field-inline legend {
+  display: block;
+  float: left;
+  font-weight: 900;
+  width: 10em;
+}
+.bb-field-inline label {
+  display: inline-block;
+  margin-right: 10px;
+}
+.bb-help-text {
+  color: #003050;
+  display: block;
+  font-weight: 100;
+  padding: .25em;
+}
+.bb-search select {
+  display: inline-block;
+  font-size: 25px;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.bb-footer {
+  color: #666;
+  padding: 1em;
+}
+.bb-footer ol,
+.bb-footer ul {
+  margin: 0;
+  padding: 0;
+}
+.bb-footer li {
+  display: inline-block;
+  list-style-type: none;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+.bb-footer li:not(:last-of-type) {
+  border-right: 1px solid black;
+}
+.bb-footer a {
+  color: #1a4663;
+  font-weight: 900;
+  text-decoration: none;
+}
+.bb-footer a:hover {
+  text-decoration: underline;
+}
+.beetbox * {
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+.beetbox {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+}
 .bb-content {
   background-color: #fff;
   display: none;
   margin-top: -2px;
 }
-
-.bb-active { 
-  display: block; 
+.bb-active {
+  display: block;
 }
-
-.bb-body {    
+.bb-body {
   background-color: #e5e5e5;
   border: 1px solid #1a4663;
   border-radius: 0 0 5px 5px;
   margin: 0;
   padding: 1em;
 }
-
 .bb-body input[type="text"] {
   border: 1px solid #1a4663;
   font-family: 'Arial';
@@ -77,12 +140,10 @@
   padding: 5px;
   width: 75%;
 }
-
 .bb-body input[type="text"]:focus {
   box-shadow: 0 0 5px 2px lightblue;
   outline: none;
 }
-
 .bb-btn {
   border: 1px solid black;
   cursor: pointer;
@@ -92,90 +153,9 @@
   padding-top: .475em;
   padding-left: .66em;
   padding-right: .66em;
-  vertical-align: bottom
+  vertical-align: bottom;
 }
-
-.bb-btn-green { 
-  background-color: lightgreen; 
+.bb-btn-green {
+  background-color: lightgreen;
   border-color: darkgreen;
-}
-
-/**
- *  fieldsets
- */
-
-.bb-field {
-  border: none;
-  padding: 5px 10px;
-}
-
-.bb-field label {
-  cursor: pointer;
-}
-
-/* add some breathing room */
-.bb-field:first-of-type {
-  margin-top: 10px;
-}
-
-/**
- *  The <legend> tag doesn't seem to take the display adjustments
- *  too well, so we'll float it to get the alignment we want
- */
-
-.bb-field-inline legend {
-  display: block;
-  float: left;
-  font-weight: 900;
-  width: 10em;
-}
-
-.bb-field-inline label {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.bb-footer {
-  color: #666;
-  padding: 1em;
-}
-
-.bb-footer ol, .bb-footer ul { 
-  margin: 0;
-  padding: 0; 
-}
-
-.bb-footer li {
-  display: inline-block;
-  list-style-type: none;
-  padding-left: .5em;
-  padding-right: .5em;
-}
-
-.bb-footer li:not(:last-of-type) {
-  border-right: 1px solid black;
-}
-
-.bb-footer a {
-  color: #1a4663;
-  font-weight: 900;
-  text-decoration: none;
-}
-
-.bb-footer a:hover {
-  text-decoration: underline;
-}
-
-.bb-help-text {
-  color: #003050;
-  display: block;
-  font-weight: 100;
-  padding: .25em;
-}
-
-.bb-search select {
-  display: inline-block;
-  font-size: 25px;
-  margin-bottom: 0;
-  vertical-align: middle;
 }

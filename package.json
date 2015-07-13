@@ -1,0 +1,27 @@
+{
+  "name": "worldcat-discovery-searchbox",
+  "version": "0.0.0",
+  "description": "Revamping our library's front-page searchbox and figuring out WorldCat Discovery along the way.",
+  "main": "index.html",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-less": "^3.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malantonio/worldcat-discovery-searchbox.git"
+  },
+  "author": "Adam Malantonio <adam.malantonio@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/malantonio/worldcat-discovery-searchbox/issues"
+  },
+  "homepage": "https://github.com/malantonio/worldcat-discovery-searchbox#readme"
+}
