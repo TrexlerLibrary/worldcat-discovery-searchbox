@@ -127,7 +127,21 @@
 
         <div id="beetbox-4" class="bb-content">
           <div class="bb-body">
-            <h1>Reserves!!!</h1>
+            <form class="bb-search" action="http://muhlenberg.on.worldcat.org/courseReserves/search" method="get">
+              <select name="courseSearchField">
+                <option value="courseName">Course Name</option>
+                <option value="instructorName">Instructor Name</option>
+                <option value="department">Department</option>
+                <option value="prefix">Course Prefix</option>
+              </select>
+              <input type="text" name="courseQuery">
+              <button class="bb-btn bb-btn-green" type="submit">Go</button>
+            </form>
+          </div>
+          <div class="bb-footer">
+            <ul>
+              <li><a href="#">Faculty Reserves Request Form</a></li>
+            </ul>
           </div>
         </div>
       </div>
