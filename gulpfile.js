@@ -1,5 +1,6 @@
 var gulp = require('gulp')
 var less = require('gulp-less')
+var rename = require('gulp-rename')
 var path = require('path')
 
 var lessOpts = {
@@ -9,6 +10,7 @@ var lessOpts = {
 gulp.task('lessify', function () {
   gulp.src('./less/main.less')
       .pipe(less(lessOpts))
+      .pipe(rename(function(f) {f.basename = 'beetbox'}))
       .pipe(gulp.dest('./css'))
 })
 
