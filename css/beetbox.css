@@ -6,7 +6,6 @@
 .beetbox {
   border: 1px solid black;
   border-radius: 10px;
-  /*overflow: hidden;*/
   padding: 5px;
 }
 
@@ -71,7 +70,7 @@
 }
 
 .bb-body input[type="text"] {
-  border: 1px solid black;
+  border: 1px solid #1a4663;
   font-family: 'Arial';
   font-size: 1.2em;
   font-weight: 100;
@@ -98,6 +97,7 @@
 
 .bb-btn-green { 
   background-color: lightgreen; 
+  border-color: darkgreen;
 }
 
 /**
@@ -118,8 +118,13 @@
   margin-top: 10px;
 }
 
+/**
+ *  The <legend> tag doesn't seem to take the display adjustments
+ *  too well, so we'll float it to get the alignment we want
+ */
+
 .bb-field-inline legend {
-  display: inline-block;
+  display: block;
   float: left;
   font-weight: 900;
   width: 10em;
