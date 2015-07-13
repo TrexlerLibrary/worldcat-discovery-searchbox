@@ -29,6 +29,43 @@
             <form class="bb-search" action="http://muhlenberg.on.worldcat.org/search" method="get">
               <input type="text" name="queryString" placeholder="Search for books, articles, videos, ebooks..." />
               <button class="bb-btn bb-btn-green" type="submit">Go</button>
+
+              <fieldset class="bb-field bb-field-inline">
+                <legend>Search by format:</legend>
+                
+                <label for="enc-book">
+                  <input type="checkbox" name="format" value="Book" id="enc-book">
+                  Books
+                </label>
+
+                <label for="enc-art">
+                  <input type="checkbox" name="format" value="ArtChap" id="enc-art">
+                  Articles
+                </label>
+
+                <label for="enc-vid">
+                  <input type="checkbox" name="format" value="Video" id="enc-vid">
+                  Videos
+                </label>
+
+                <label for="enc-jrn">
+                  <input type="checkbox" name="format" value="Jrnl" id="enc-jrn">
+                  Journals
+                </label>
+              </fieldset>
+
+              <fieldset class="bb-field bb-field-inline">
+                <legend>Limit scope to:</legend>
+                <label>
+                  <input type="radio" name="scope" value="wz:526" checked>
+                  Trexler Library Muhlenberg College
+                </label>
+
+                <label>
+                  <input type="radio" name="scope" value="">
+                  Libraries worldwide
+                </label>
+              </fieldset>
             </form>
           </div>
 
