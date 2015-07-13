@@ -15,7 +15,7 @@ gulp.task('lessify', function () {
 })
 
 gulp.task('watch', function () {
-  gulp.watch('./less/*', ['lessify'])
+  gulp.watch('./less/**/*.less', ['lessify'])
 })
 
 gulp.task('build', ['watch'])
