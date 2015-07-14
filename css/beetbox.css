@@ -1,19 +1,12 @@
-/**
- *  Specific color definitions
- */
-/**
- * 
- */
-/**
- *  Font definition
- */
 .bb-nav {
   width: 100%;
 }
 .bb-nav a {
-  padding-left: .75em;
-  padding-right: .75em;
+  display: inline-block;
+  height: 100%;
+  padding: 8px;
   text-decoration: none;
+  width: 100%;
 }
 .bb-nav .active {
   background-color: #e5e5e5;
@@ -30,6 +23,11 @@
 .bb-nav li:first-of-type {
   border-top-left-radius: 10px;
 }
+@media screen and (max-width: 768px) {
+  .bb-nav li:first-of-type {
+    border-top-right-radius: 10px;
+  }
+}
 .bb-nav li {
   background-color: #1a4663;
   border: 1px solid #1a4663;
@@ -37,10 +35,62 @@
   display: inline-block;
   font-size: 18px;
   margin: 0;
-  padding: 8px;
+}
+@media screen and (max-width: 768px) {
+  .bb-nav li {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
 }
 .bb-nav li a {
-  color: #e5e5e5;
+  color: #ffffff;
+}
+.bb-body {
+  background-color: #e5e5e5;
+  border: 1px solid #1a4663;
+  border-radius: 0 0 10px 10px;
+  margin: 0;
+  padding: 1em;
+}
+.bb-body input[type="text"] {
+  border: 1px solid #1a4663;
+  font-family: 'Arial';
+  font-size: 1.2em;
+  font-weight: 100;
+  padding: 5px;
+  width: 75%;
+}
+@media screen and (max-width: 768px) {
+  .bb-body input[type="text"] {
+    margin: .5em auto;
+    width: 100%;
+  }
+}
+.bb-body input[type="text"]:focus {
+  box-shadow: 0 0 5px 2px lightblue;
+  outline: none;
+}
+.bb-btn {
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1.25em;
+  padding-bottom: .475em;
+  padding-top: .475em;
+  padding-left: .66em;
+  padding-right: .66em;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .bb-btn {
+    display: block;
+    width: 100%;
+  }
+}
+.bb-btn-green {
+  background-color: lightgreen;
+  border-color: darkgreen;
 }
 /**
  *  fieldsets
@@ -62,25 +112,39 @@
  */
 .bb-field-inline legend {
   display: block;
-  float: left;
   font-weight: 900;
   width: 10em;
+}
+@media screen and (min-width: 768px + 1px) {
+  .bb-field-inline legend {
+    float: left;
+  }
 }
 .bb-field-inline label {
   display: inline-block;
   margin-right: 10px;
 }
-.bb-help-text {
-  color: #003050;
-  display: block;
-  font-weight: 100;
-  padding: .25em;
+@media screen and (max-width: 768px) {
+  .bb-field-inline label {
+    display: block;
+  }
 }
 .bb-search select {
   display: inline-block;
   font-size: 25px;
   margin-bottom: 0;
   vertical-align: middle;
+}
+@media screen and (max-width: 768px) {
+  .bb-search select {
+    width: 100%;
+  }
+}
+.bb-help-text {
+  color: #1a4663;
+  display: block;
+  font-weight: 100;
+  padding: .25em;
 }
 .bb-footer {
   color: #666;
@@ -97,8 +161,20 @@
   padding-left: .5em;
   padding-right: .5em;
 }
+@media screen and (max-width: 768px) {
+  .bb-footer li {
+    display: block;
+    padding-top: .25em;
+    padding-bottom: .25em;
+  }
+}
 .bb-footer li:not(:last-of-type) {
   border-right: 1px solid black;
+}
+@media screen and (max-width: 768px) {
+  .bb-footer li:not(:last-of-type) {
+    border: 0;
+  }
 }
 .bb-footer a {
   color: #1a4663;
@@ -113,7 +189,7 @@
   font-family: 'Arial', sans-serif;
 }
 .beetbox {
-  border: 1px solid black;
+  border: 1px solid #000;
   border-radius: 10px;
   padding: 5px;
 }
@@ -124,38 +200,4 @@
 }
 .bb-active {
   display: block;
-}
-.bb-body {
-  background-color: #e5e5e5;
-  border: 1px solid #1a4663;
-  border-radius: 0 0 5px 5px;
-  margin: 0;
-  padding: 1em;
-}
-.bb-body input[type="text"] {
-  border: 1px solid #1a4663;
-  font-family: 'Arial';
-  font-size: 1.2em;
-  font-weight: 100;
-  padding: 5px;
-  width: 75%;
-}
-.bb-body input[type="text"]:focus {
-  box-shadow: 0 0 5px 2px lightblue;
-  outline: none;
-}
-.bb-btn {
-  border: 1px solid black;
-  cursor: pointer;
-  font-size: 15px;
-  line-height: 1.25em;
-  padding-bottom: .475em;
-  padding-top: .475em;
-  padding-left: .66em;
-  padding-right: .66em;
-  vertical-align: bottom;
-}
-.bb-btn-green {
-  background-color: lightgreen;
-  border-color: darkgreen;
 }

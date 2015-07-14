@@ -13,10 +13,20 @@
   list-style-type: none;
   padding-left: .5em;
   padding-right: .5em;
+
+  .display-small({
+    display: block;
+    padding-top: .25em;
+    padding-bottom: .25em;
+  });
 }
 
 .bb-footer li:not(:last-of-type) {
   border-right: 1px solid black;
+  
+  .display-small({
+    border: 0;
+  });
 }
 
 .bb-footer a {

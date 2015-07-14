@@ -1,3 +1,53 @@
+
+.bb-body {    
+  background-color: @tab-content-bg-color;
+  border: 1px solid @theme-secondary;
+  border-radius: 0 0 @border-radius-amount @border-radius-amount;
+  margin: 0;
+  padding: 1em;
+}
+
+.bb-body input[type="text"] {
+  border: 1px solid @theme-secondary;
+  font-family: 'Arial';
+  font-size: 1.2em;
+  font-weight: 100;
+  padding: 5px;
+  width: 75%;
+
+  .display-small({
+    margin: .5em auto;
+    width: 100%;
+  });
+}
+
+.bb-body input[type="text"]:focus {
+  box-shadow: 0 0 5px 2px lightblue;
+  outline: none;
+}
+
+.bb-btn {
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1.25em;
+  padding-bottom: .475em;
+  padding-top: .475em;
+  padding-left: .66em;
+  padding-right: .66em;
+  vertical-align: bottom;
+
+  .display-small({
+    display: block;
+    width: 100%;
+  });
+}
+
+.bb-btn-green { 
+  background-color: lightgreen; 
+  border-color: darkgreen;
+}
+
 /**
  *  fieldsets
  */
@@ -23,22 +73,19 @@
 
 .bb-field-inline legend {
   display: block;
-  float: left;
   font-weight: 900;
   width: 10em;
+
+  .display-medium({ float: left; });
 }
 
 .bb-field-inline label {
   display: inline-block;
   margin-right: 10px;
-}
 
-
-.bb-help-text {
-  color: #003050;
-  display: block;
-  font-weight: 100;
-  padding: .25em;
+  .display-small({
+    display: block;
+  });
 }
 
 .bb-search select {
@@ -46,4 +93,15 @@
   font-size: 25px;
   margin-bottom: 0;
   vertical-align: middle;
+
+  .display-small({
+    width: 100%;
+  });
+}
+
+.bb-help-text {
+  color: @theme-secondary;
+  display: block;
+  font-weight: 100;
+  padding: .25em;
 }

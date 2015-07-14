@@ -1,0 +1,17 @@
+.display-small(@rules) {
+  @media screen and (max-width: @small-screen-max) {
+    @rules();
+  }
+}
+
+.display-medium(@rules) {
+  @media screen and (min-width: @medium-screen-min) {
+    @rules();
+  }
+}
+
+.display-large(@rules) {
+  @media screen and (min-width: @large-screen-min) {
+    @rules();
+  }
+}

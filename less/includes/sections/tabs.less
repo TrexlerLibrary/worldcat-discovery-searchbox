@@ -2,10 +2,12 @@
   width: 100%;
 }
 
-.bb-nav a { 
-  padding-left: .75em;
-  padding-right: .75em;
+.bb-nav a {
+  display: inline-block;
+  height: 100%;
+  padding: @tab-padding;
   text-decoration: none; 
+  width: 100%;
 }
 
 .bb-nav .active {
@@ -23,7 +25,10 @@
 }
 
 .bb-nav li:first-of-type {
-  border-top-left-radius: 10px;
+  border-top-left-radius: @border-radius-amount;
+  .display-small({
+    border-top-right-radius: @border-radius-amount;
+  });
 }
 
 .bb-nav li {
@@ -33,7 +38,12 @@
   display: inline-block;
   font-size: 18px;
   margin: 0;
-  padding: 8px;
+
+  .display-small({
+    display: block;
+    text-align: center;
+    width: 100%;
+  });
 }
 
 .bb-nav li a {
