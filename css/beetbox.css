@@ -8,8 +8,6 @@
   font-size: 16px;
   padding: 5px;
   margin: auto;
-  margin-top: 10em;
-  width: 700px;
 }
 .beetbox-shadow {
   box-shadow: 0 0 5px 3px #1a4663;
@@ -21,6 +19,43 @@
 }
 .bb-active {
   display: block;
+}
+.bb-width-1-8 {
+  width: 12.5%;
+}
+.bb-width-1-4,
+.bb-width-2-8 {
+  width: 25%;
+}
+.bb-width-3-8 {
+  width: 37.5%;
+}
+.bb-width-1-2,
+.bb-width-2-4,
+.bb-width-4-8 {
+  width: 50%;
+}
+.bb-width-5-8 {
+  width: 62.5%;
+}
+.bb-width-3-4,
+.bb-width-6-8 {
+  width: 75%;
+}
+.bb-width-7-8 {
+  width: 87.5%;
+}
+.bb-width-2-2,
+.bb-width-4-4,
+.bb-width-8-8,
+.bb-width-full {
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  [class^="bb-width-"] {
+    display: block;
+    width: 100%;
+  }
 }
 .bb-nav a {
   display: inline-block;
@@ -100,7 +135,6 @@
   border: 1px solid #1a4663;
   font-weight: 100;
   padding: 5px;
-  width: 75%;
 }
 @media screen and (max-width: 768px) {
   .bb-body input[type="text"] {
@@ -173,7 +207,7 @@ label input[type="radio"] {
   vertical-align: middle;
 }
 .bb-form select {
-  border: 1px solid #e5e5e5;
+  border: 1px solid #1a4663;
   display: inline-block;
   height: 30px;
   margin-bottom: 0;

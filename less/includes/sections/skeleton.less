@@ -9,8 +9,6 @@
   font-size: @base-font-size;
   padding: @beetbox-padding;
   margin: auto;
-  margin-top: 10em;
-  width: 700px;
 }
 
 .beetbox-shadow {  
@@ -26,3 +24,22 @@
 .bb-active { 
   display: block; 
 }
+
+// some helpers
+.bb-width {
+  &-1-8 { width: 12.5%; }
+  &-1-4, &-2-8 { width: 25%; }
+  &-3-8 { width: 37.5%; }
+  &-1-2, &-2-4, &-4-8 { width: 50%; }
+  &-5-8 { width: 62.5%; }
+  &-3-4, &-6-8 { width: 75%; }
+  &-7-8 { width: 87.5%; }
+  &-2-2, &-4-4, &-8-8, &-full { width: 100%; }
+}
+
+.display-small({
+  [class^="bb-width-"] {
+    display: block;
+    width: 100%;
+  }
+});
