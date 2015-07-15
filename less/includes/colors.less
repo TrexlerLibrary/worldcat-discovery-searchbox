@@ -3,24 +3,31 @@
 //
 
 @dark-blue: #1a4663;
+@green: #1a6337;
 @grey: #e5e5e5;
 
 @white: #ffffff;
 @black: #111111;
 
-@theme-primary: @grey;
-@theme-secondary: @dark-blue;
+@theme-primary: @dark-blue;
+@theme-secondary: @grey;
 
 //
 // divvying up the color distribution
 //
 
-@tab-active-bg-color: @theme-primary;
-@tab-active-link-color: @theme-secondary;
+@tab-active-bg-color: @theme-secondary;
+@tab-active-link-color: @theme-primary;
 
-@tab-inactive-bg-color: @theme-secondary;
+@tab-inactive-bg-color: @theme-primary;
 @tab-inactive-link-color: @white;
 
 @tab-content-bg-color: @theme-primary;
+@active-content-bg-color: @grey;
 
-@link-color: @dark-blue;
+@link-color: @theme-primary;
+
+@button-bg-color: lighten(@green, 25%);
+@button-border-color: darken(@button-bg-color, 50%);
+@button-text-color: @white;
+

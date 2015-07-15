@@ -9,7 +9,7 @@
     <title>Search Boxin'</title>
   </head>
   <body>
-    <div class="beetbox">
+    <div class="beetbox beetbox-shadow">
       <!-- tab headers -->
       <nav class="bb-nav">
         <ul>
@@ -25,13 +25,7 @@
         <div id="beetbox-1" class="bb-content bb-active">
           
           <div class="bb-body">
-            <!-- first tab's content -->
-            <form class="bb-search" action="http://muhlenberg.on.worldcat.org/search" method="get">
-              <!-- <select name="_queryString">
-                <option value="">Keyword</option>
-                <option value="ti:">Title</option>
-                <option value="au:">Author</option>
-              </select> -->
+            <form class="bb-form" action="http://muhlenberg.on.worldcat.org/search" method="get">
               <input type="text" name="queryString" placeholder="Search for books, articles, videos, ebooks..." />
               <button class="bb-btn bb-btn-green" type="submit">Go</button>
 
@@ -93,7 +87,7 @@
 
         <div id="beetbox-2" class="bb-content">
           <div class="bb-body">
-            <form class="bb-search" action="" method="get">
+            <form class="bb-form" action="" method="get">
               <span class="bb-help-text">
                 Browse online journal titles by subject
               </span>
@@ -104,7 +98,7 @@
               <button class="bb-btn bb-btn-green" type="submit">Go</button>
             </form>
               <hr>
-            <form class="bb-search" action="" method="get">
+            <form class="bb-form" action="" method="get">
               <span class="bb-help-text">
                 Find journals by title or ISSN
               </span>
@@ -135,7 +129,7 @@
 
         <div id="beetbox-4" class="bb-content">
           <div class="bb-body">
-            <form class="bb-search" action="http://muhlenberg.on.worldcat.org/courseReserves/search" method="get">
+            <form class="bb-form" action="http://muhlenberg.on.worldcat.org/courseReserves/search" method="get">
               <select name="courseSearchField">
                 <option value="courseName">Course Name</option>
                 <option value="instructorName">Instructor Name</option>
@@ -143,7 +137,7 @@
                 <option value="prefix">Course Prefix</option>
               </select>
               <input type="text" name="courseQuery">
-              <button class="bb-btn bb-btn-green" type="submit">Go</button>
+              <button class="bb-btn" type="submit">Go</button>
             </form>
           </div>
           <div class="bb-footer">

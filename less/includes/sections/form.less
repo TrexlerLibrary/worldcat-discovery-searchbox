@@ -1,43 +1,47 @@
 .bb-body {    
-  background-color: @tab-content-bg-color;
-  border: 1px solid @theme-secondary;
+  background-color: @active-content-bg-color;
+  border: 1px solid @theme-primary;
   border-radius: 0 0 @box-border-radius @box-border-radius;
   margin: 0;
   padding: 1em;
 }
 
-.bb-search {
-  input,
+.bb-form {
+  input[type="text"],
   select,
   button {
     border-radius: @form-element-border-radius;
+
+    &:focus {
+      box-shadow: 0 0 5px 2px lighten(@theme-primary, 33%);
+      outline: none;
+    }
   }
-} 
-
-.bb-body input[type="text"] {
-  border: 1px solid @theme-secondary;
-  font-family: 'Arial';
-  // font-size: 1.2em;
-  font-weight: 100;
-  padding: 5px;
-  width: 75%;
-
-  .display-small({
-    margin: .5em auto;
-    width: 100%;
-  });
 }
 
-.bb-body input[type="text"]:focus {
-  box-shadow: 0 0 5px 2px lightblue;
-  outline: none;
+.bb-body {
+  input, button, select {
+    height: @element-base-height;
+  }
+ 
+  input[type="text"] {
+    border: 1px solid @theme-primary;
+    font-weight: 100;
+    padding: 5px;
+    width: 75%;
+
+    .display-small({
+      margin: (@form-element-margin * 2) auto;
+      width: 100%;
+    });
+  }
 }
 
 .bb-btn {
-  border: 1px solid black;
+  background-color: @button-bg-color;
+  border: 1px solid @button-border-color;
+  color: @button-text-color;
   cursor: pointer;
-  font-size: 15px;
-  line-height: 1.25em;
   vertical-align: bottom;
 
   .display-small({
@@ -46,30 +50,13 @@
   });
 }
 
-.bb-btn-green { 
-  background-color: lightgreen; 
-  border-color: darkgreen;
-}
-
-/**
- *  fieldsets
- */
-
-.bb-field {
-  border: none;
-  padding: 5px 10px;
-}
-
-.bb-field label {
-  cursor: pointer;
-}
-
 .bb-options {
-  padding:0;
-
-  li, lh {
-    display: inline-block;
-  }
+  margin: 0;
+  padding: 0;
+  
+  .display-small({
+    margin-top: @form-element-margin;
+  });
 
   label {
     cursor: pointer;
@@ -77,7 +64,12 @@
 }
 
 .bb-opt, .bb-opt-header {
+  display: inline-block;
   vertical-align: middle;
+
+  .display-small({
+    display: block;
+  });
 }
 
 .bb-opt {
@@ -88,9 +80,18 @@
     font-weight: bold; 
     text-align: right;
     margin-right: 1em;
-    width: 10em;
+    width: @opt-header-width;
+
+    .display-small({
+      text-align: left;
+      width: auto;  
+    });
   }
   
+  .display-small({
+    margin-left: @form-element-margin * 2;  
+  });
+
   label {
     cursor: pointer;
   }
@@ -103,21 +104,33 @@ label {
   }
 }
 
-.bb-search select {
+.bb-form select {
   border: 1px solid @theme-secondary;
   display: inline-block;
-  // font-size: 25px;
   height: 30px;
   margin-bottom: 0;
   vertical-align: middle;
 
   .display-small({
+    display: block;
     width: 100%;
+
+    + button {
+      // the text input is providing @form-element-margin
+      // for top and bottom. to make up this difference
+      // when only using a select and a button, we'll add
+      // it to the top of the button, since that's easily
+      // target-able.
+      //
+      // multiplying by 2 adds margin that would have
+      // come from bottom of the select element
+      margin-top: @form-element-margin * 2;
+    }
   });
 }
 
 .bb-help-text {
-  color: @theme-secondary;
+  color: @theme-primary;
   display: block;
   font-weight: 100;
   padding: .25em;

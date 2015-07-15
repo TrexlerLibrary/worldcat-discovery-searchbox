@@ -2,13 +2,17 @@
   box-sizing: border-box;
 }
 .beetbox {
-  border: 1px solid #000;
+  border: 1px solid #111111;
   border-radius: 10px;
   font-family: 'Arial', sans-serif;
   font-size: 16px;
   padding: 5px;
   margin: auto;
+  margin-top: 10em;
   width: 700px;
+}
+.beetbox-shadow {
+  box-shadow: 0 0 5px 3px #1a4663;
 }
 .bb-content {
   background-color: #fff;
@@ -17,9 +21,6 @@
 }
 .bb-active {
   display: block;
-}
-.bb-nav {
-  width: 100%;
 }
 .bb-nav a {
   display: inline-block;
@@ -33,6 +34,12 @@
 }
 .bb-nav .active a {
   color: #1a4663;
+}
+@media screen and (max-width: 768px) {
+  .bb-nav .active a:before {
+    content: '>';
+    float: left;
+  }
 }
 .bb-nav ul {
   background-color: #fff;
@@ -73,33 +80,39 @@
   margin: 0;
   padding: 1em;
 }
-.bb-search input,
-.bb-search select,
-.bb-search button {
+.bb-form input[type="text"],
+.bb-form select,
+.bb-form button {
   border-radius: 2px;
+}
+.bb-form input[type="text"]:focus,
+.bb-form select:focus,
+.bb-form button:focus {
+  box-shadow: 0 0 5px 2px #53a0d2;
+  outline: none;
+}
+.bb-body input,
+.bb-body button,
+.bb-body select {
+  height: 2em;
 }
 .bb-body input[type="text"] {
   border: 1px solid #1a4663;
-  font-family: 'Arial';
   font-weight: 100;
   padding: 5px;
   width: 75%;
 }
 @media screen and (max-width: 768px) {
   .bb-body input[type="text"] {
-    margin: .5em auto;
+    margin: 0.5em auto;
     width: 100%;
   }
 }
-.bb-body input[type="text"]:focus {
-  box-shadow: 0 0 5px 2px lightblue;
-  outline: none;
-}
 .bb-btn {
-  border: 1px solid black;
+  background-color: #35c86f;
+  border: 1px solid #000000;
+  color: #ffffff;
   cursor: pointer;
-  font-size: 15px;
-  line-height: 1.25em;
   vertical-align: bottom;
 }
 @media screen and (max-width: 768px) {
@@ -108,33 +121,28 @@
     width: 100%;
   }
 }
-.bb-btn-green {
-  background-color: lightgreen;
-  border-color: darkgreen;
-}
-/**
- *  fieldsets
- */
-.bb-field {
-  border: none;
-  padding: 5px 10px;
-}
-.bb-field label {
-  cursor: pointer;
-}
 .bb-options {
+  margin: 0;
   padding: 0;
 }
-.bb-options li,
-.bb-options lh {
-  display: inline-block;
+@media screen and (max-width: 768px) {
+  .bb-options {
+    margin-top: 0.25em;
+  }
 }
 .bb-options label {
   cursor: pointer;
 }
 .bb-opt,
 .bb-opt-header {
+  display: inline-block;
   vertical-align: middle;
+}
+@media screen and (max-width: 768px) {
+  .bb-opt,
+  .bb-opt-header {
+    display: block;
+  }
 }
 .bb-opt {
   list-style-type: none;
@@ -146,6 +154,17 @@
   margin-right: 1em;
   width: 10em;
 }
+@media screen and (max-width: 768px) {
+  .bb-opt-header {
+    text-align: left;
+    width: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .bb-opt {
+    margin-left: 0.5em;
+  }
+}
 .bb-opt label {
   cursor: pointer;
 }
@@ -153,16 +172,20 @@ label input[type="checkbox"],
 label input[type="radio"] {
   vertical-align: middle;
 }
-.bb-search select {
-  border: 1px solid #1a4663;
+.bb-form select {
+  border: 1px solid #e5e5e5;
   display: inline-block;
   height: 30px;
   margin-bottom: 0;
   vertical-align: middle;
 }
 @media screen and (max-width: 768px) {
-  .bb-search select {
+  .bb-form select {
+    display: block;
     width: 100%;
+  }
+  .bb-form select + button {
+    margin-top: 0.5em;
   }
 }
 .bb-help-text {
@@ -203,7 +226,7 @@ label input[type="radio"] {
 }
 .bb-footer a {
   color: #1a4663;
-  font-weight: 900;
+  font-weight: bold;
   text-decoration: none;
 }
 .bb-footer a:hover {
