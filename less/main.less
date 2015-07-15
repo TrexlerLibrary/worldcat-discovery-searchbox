@@ -1,27 +1,10 @@
+// variable definitions
 @import "sizes";
+@import "fonts";
 @import "colors";
 @import "mixins";
+
+@import "sections/skeleton";
 @import "sections/tabs";
 @import "sections/form";
 @import "sections/footer";
-
-.beetbox * { 
-  box-sizing: border-box; 
-  font-family: @main-font-family;
-}
-
-.beetbox {
-  border: 1px solid #000;
-  border-radius: @border-radius-amount;
-  padding: 5px;
-}
-
-.bb-content {
-  background-color: #fff;
-  display: none;
-  margin-top: -2px;
-}
-
-.bb-active { 
-  display: block; 
-}

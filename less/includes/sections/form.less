@@ -1,16 +1,23 @@
-
 .bb-body {    
   background-color: @tab-content-bg-color;
   border: 1px solid @theme-secondary;
-  border-radius: 0 0 @border-radius-amount @border-radius-amount;
+  border-radius: 0 0 @box-border-radius @box-border-radius;
   margin: 0;
   padding: 1em;
 }
 
+.bb-search {
+  input,
+  select,
+  button {
+    border-radius: @form-element-border-radius;
+  }
+} 
+
 .bb-body input[type="text"] {
   border: 1px solid @theme-secondary;
   font-family: 'Arial';
-  font-size: 1.2em;
+  // font-size: 1.2em;
   font-weight: 100;
   padding: 5px;
   width: 75%;
@@ -31,10 +38,6 @@
   cursor: pointer;
   font-size: 15px;
   line-height: 1.25em;
-  padding-bottom: .475em;
-  padding-top: .475em;
-  padding-left: .66em;
-  padding-right: .66em;
   vertical-align: bottom;
 
   .display-small({
@@ -61,36 +64,50 @@
   cursor: pointer;
 }
 
-/* add some breathing room */
-.bb-field:first-of-type {
-  margin-top: 10px;
+.bb-options {
+  padding:0;
+
+  li, lh {
+    display: inline-block;
+  }
+
+  label {
+    cursor: pointer;
+  }
 }
 
-/**
- *  The <legend> tag doesn't seem to take the display adjustments
- *  too well, so we'll float it to get the alignment we want
- */
-
-.bb-field-inline legend {
-  display: block;
-  font-weight: 900;
-  width: 10em;
-
-  .display-medium({ float: left; });
+.bb-opt, .bb-opt-header {
+  vertical-align: middle;
 }
 
-.bb-field-inline label {
-  display: inline-block;
-  margin-right: 10px;
+.bb-opt {
+  list-style-type: none;
+  margin-right: 7px;
+  
+  &-header { 
+    font-weight: bold; 
+    text-align: right;
+    margin-right: 1em;
+    width: 10em;
+  }
+  
+  label {
+    cursor: pointer;
+  }
+}
 
-  .display-small({
-    display: block;
-  });
+label {
+  input[type="checkbox"],
+  input[type="radio"] {
+    vertical-align: middle;
+  }
 }
 
 .bb-search select {
+  border: 1px solid @theme-secondary;
   display: inline-block;
-  font-size: 25px;
+  // font-size: 25px;
+  height: 30px;
   margin-bottom: 0;
   vertical-align: middle;
 

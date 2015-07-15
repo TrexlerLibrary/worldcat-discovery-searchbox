@@ -1,3 +1,23 @@
+.beetbox * {
+  box-sizing: border-box;
+}
+.beetbox {
+  border: 1px solid #000;
+  border-radius: 10px;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  padding: 5px;
+  margin: auto;
+  width: 700px;
+}
+.bb-content {
+  background-color: #fff;
+  display: none;
+  margin-top: -2px;
+}
+.bb-active {
+  display: block;
+}
 .bb-nav {
   width: 100%;
 }
@@ -53,10 +73,14 @@
   margin: 0;
   padding: 1em;
 }
+.bb-search input,
+.bb-search select,
+.bb-search button {
+  border-radius: 2px;
+}
 .bb-body input[type="text"] {
   border: 1px solid #1a4663;
   font-family: 'Arial';
-  font-size: 1.2em;
   font-weight: 100;
   padding: 5px;
   width: 75%;
@@ -76,10 +100,6 @@
   cursor: pointer;
   font-size: 15px;
   line-height: 1.25em;
-  padding-bottom: .475em;
-  padding-top: .475em;
-  padding-left: .66em;
-  padding-right: .66em;
   vertical-align: bottom;
 }
 @media screen and (max-width: 768px) {
@@ -102,36 +122,41 @@
 .bb-field label {
   cursor: pointer;
 }
-/* add some breathing room */
-.bb-field:first-of-type {
-  margin-top: 10px;
+.bb-options {
+  padding: 0;
 }
-/**
- *  The <legend> tag doesn't seem to take the display adjustments
- *  too well, so we'll float it to get the alignment we want
- */
-.bb-field-inline legend {
-  display: block;
-  font-weight: 900;
+.bb-options li,
+.bb-options lh {
+  display: inline-block;
+}
+.bb-options label {
+  cursor: pointer;
+}
+.bb-opt,
+.bb-opt-header {
+  vertical-align: middle;
+}
+.bb-opt {
+  list-style-type: none;
+  margin-right: 7px;
+}
+.bb-opt-header {
+  font-weight: bold;
+  text-align: right;
+  margin-right: 1em;
   width: 10em;
 }
-@media screen and (min-width: 768px + 1px) {
-  .bb-field-inline legend {
-    float: left;
-  }
+.bb-opt label {
+  cursor: pointer;
 }
-.bb-field-inline label {
-  display: inline-block;
-  margin-right: 10px;
-}
-@media screen and (max-width: 768px) {
-  .bb-field-inline label {
-    display: block;
-  }
+label input[type="checkbox"],
+label input[type="radio"] {
+  vertical-align: middle;
 }
 .bb-search select {
+  border: 1px solid #1a4663;
   display: inline-block;
-  font-size: 25px;
+  height: 30px;
   margin-bottom: 0;
   vertical-align: middle;
 }
@@ -183,21 +208,4 @@
 }
 .bb-footer a:hover {
   text-decoration: underline;
-}
-.beetbox * {
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
-}
-.beetbox {
-  border: 1px solid #000;
-  border-radius: 10px;
-  padding: 5px;
-}
-.bb-content {
-  background-color: #fff;
-  display: none;
-  margin-top: -2px;
-}
-.bb-active {
-  display: block;
 }

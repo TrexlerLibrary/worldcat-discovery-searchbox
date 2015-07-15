@@ -27,50 +27,58 @@
           <div class="bb-body">
             <!-- first tab's content -->
             <form class="bb-search" action="http://muhlenberg.on.worldcat.org/search" method="get">
-              <select>
-                <option>Keyword</option>
-                <option>Title</option>
-                <option>Author</option>
-              </select>
+              <!-- <select name="_queryString">
+                <option value="">Keyword</option>
+                <option value="ti:">Title</option>
+                <option value="au:">Author</option>
+              </select> -->
               <input type="text" name="queryString" placeholder="Search for books, articles, videos, ebooks..." />
               <button class="bb-btn bb-btn-green" type="submit">Go</button>
 
-              <fieldset class="bb-field bb-field-inline">
-                <legend>Search by format:</legend>
-                
-                <label for="enc-book">
-                  <input type="checkbox" name="format" value="Book" id="enc-book">
-                  Books
-                </label>
+              <ul class="bb-options">
+                <lh class="bb-opt-header">Search by format:</lh>
+                <li class="bb-opt">
+                  <label for="enc-book">
+                    <input type="checkbox" name="format" value="Book" id="enc-book">
+                    Books
+                  </label>
+                </li>
+                <li class="bb-opt">
+                  <label for="enc-artchap">
+                    <input type="checkbox" name="format" value="Artchap" id="enc-artchap">
+                    Articles
+                  </label>
+                </li>
+                <li class="bb-opt">
+                  <label for="enc-video">
+                    <input type="checkbox" name="format" value="Video" id="enc-video">
+                    Videos
+                  </label>
+                </li>
+                <li class="bb-opt">
+                  <label for="enc-jrnl">
+                    <input type="checkbox" name="format" value="Jrnl" id="enc-jrnl">
+                    Journals
+                  </label>
+                </li>
+              </ul>
+              
+              <ul class="bb-options">
+                <lh class="bb-opt-header">Limit scope to:</lh>
+                <li class="bb-opt">
+                  <label for="scope-lib">
+                    <input type="radio" name="scope" value="wz:526" id="scope-lib" checked>
+                    Trexler Library Muhlenberg College
+                  </label>
+                </li>
 
-                <label for="enc-artchap">
-                  <input type="checkbox" name="format" value="Artchap" id="enc-artchap">
-                  Articles
-                </label>
-
-                <label for="enc-video">
-                  <input type="checkbox" name="format" value="Video" id="enc-video">
-                  Videos
-                </label>
-
-                <label for="enc-jrnl">
-                  <input type="checkbox" name="format" value="Jrnl" id="enc-jrnl">
-                  Journals
-                </label>
-              </fieldset>
-
-              <fieldset class="bb-field bb-field-inline">
-                <legend>Limit scope to:</legend>
-                <label>
-                  <input type="radio" name="scope" value="wz:526" checked>
-                  Trexler Library Muhlenberg College
-                </label>
-
-                <label>
-                  <input type="radio" name="scope" value="">
-                  Libraries worldwide
-                </label>
-              </fieldset>
+                <li class="bb-opt">
+                  <label for="scope-world">
+                    <input type="radio" name="scope" value="" id="scope-world">
+                    Libraries worldwide
+                  </label>
+                </li>
+              </ul>
             </form>
           </div>
 
