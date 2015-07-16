@@ -4,6 +4,7 @@ var path = require('path')
 var less = require('gulp-less')
 var rename = require('gulp-rename')
 var minifyCss = require('gulp-minify-css')
+var plumber = require('gulp-plumber')
 
 var lessOpts = {
   paths: [path.join(__dirname, 'less', 'includes')]
@@ -11,6 +12,7 @@ var lessOpts = {
 
 gulp.task('lessify', function () {
   gulp.src('./less/main.less')
+      .pipe(plumber())
       .pipe(less(lessOpts))
       .pipe(rename(function(f) {f.basename = 'beetbox'}))
       .pipe(gulp.dest('./css'))
