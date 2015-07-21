@@ -108,16 +108,22 @@
   margin: 0;
   padding: 1em;
 }
-.bb-form input[type="text"],
+.bb-form {
+  font-size: 16px;
+}
 .bb-form select,
 .bb-form button {
   border-radius: 2px;
+  margin-bottom: 0;
 }
-.bb-form input[type="text"]:focus,
 .bb-form select:focus,
 .bb-form button:focus {
   box-shadow: 0 0 5px 2px #53a0d2;
   outline: none;
+}
+.bb-form input[type="text"] {
+  font-size: 16px;
+  margin-bottom: 0;
 }
 .bb-body input,
 .bb-body button,

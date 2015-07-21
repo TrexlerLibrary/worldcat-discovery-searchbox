@@ -7,15 +7,22 @@
 }
 
 .bb-form {
-  input[type="text"],
+  font-size: @base-font-size;
+
   select,
   button {
     border-radius: @form-element-border-radius;
+    margin-bottom: 0;
 
     &:focus {
       box-shadow: 0 0 5px 2px lighten(@theme-primary, 33%);
       outline: none;
     }
+  }
+
+  input[type="text"] {
+    font-size: 16px;
+    margin-bottom: 0;
   }
 }
 
@@ -28,7 +35,6 @@
     border: 1px solid @theme-primary;
     font-weight: 100;
     padding: 5px;
-    // width: 75%;
 
     .display-small({
       margin: (@form-element-margin * 2) auto;
