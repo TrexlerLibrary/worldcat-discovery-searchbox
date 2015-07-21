@@ -1,5 +1,15 @@
-Array.prototype.forEach.call(document.querySelectorAll('.bb-nav li'), function (li) {
+var encToggles = document.querySelectorAll('input[id^="enc-"]')
+var allToggle = document.querySelector('#enc-all')
+var forEach = Array.prototype.forEach
+
+// apply bb nav-toggles
+forEach.call(document.querySelectorAll('.bb-nav li'), function (li) {
   li.addEventListener('click', handleNavToggle)
+})
+
+// apply Encompass search toggles
+forEach.call(encToggles, function (input) { 
+  input.addEventListener('change', handleEncToggles) 
 })
 
 function handleNavToggle(ev) {
@@ -26,3 +36,20 @@ function handleNavToggle(ev) {
 
 function addClass(el, className) { return el.classList.add(className) }
 function removeClass(el, className) { return el.classList.remove(className) }
+
+function handleEncToggles(ev) {
+  var which = ev.target
+  var isAll = function (t) { return t === allToggle }
+  var isChecked = !!which.checked
+
+  if (isAll(which) && isChecked) {
+    forEach.call(encToggles, function (t) {
+      if (t !== allToggle) return t.checked = false
+    })
+  } 
+
+  else if (isChecked && allToggle.checked) {
+    allToggle.checked = false
+  }
+
+}
