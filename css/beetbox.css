@@ -3,6 +3,7 @@
   font-size: 16px;
 }
 .beetbox {
+  background-color: #fff;
   border: 1px solid #1a4663;
   border-radius: 10px;
   font-family: 'Arial', sans-serif;
@@ -11,6 +12,13 @@
 }
 .beetbox-shadow {
   box-shadow: 0 0 5px 3px #1a4663;
+}
+.bb-body {
+  background-color: #e5e5e5;
+  border: 1px solid #1a4663;
+  border-radius: 0 0 10px 10px;
+  margin: 0;
+  padding: 1em;
 }
 .bb-content {
   background-color: #fff;
@@ -57,31 +65,10 @@
     width: 100%;
   }
 }
-.bb-nav a {
-  display: inline-block;
-  height: 100%;
-  padding: 8px;
-  text-decoration: none;
-  width: 100%;
-}
-.bb-nav .active {
-  background-color: #e5e5e5;
-}
-.bb-nav .active a {
-  color: #1a4663;
-}
 .bb-nav ul {
   background-color: #fff;
   margin: 0;
   padding: 0;
-}
-.bb-nav li:first-of-type {
-  border-top-left-radius: 10px;
-}
-@media screen and (max-width: 768px) {
-  .bb-nav li:first-of-type {
-    border-top-right-radius: 10px;
-  }
 }
 .bb-nav li {
   background-color: #1a4663;
@@ -91,6 +78,23 @@
   font-size: 18px;
   margin: 0;
 }
+.bb-nav li a {
+  color: #ffffff;
+  display: inline-block;
+  font-size: 1em;
+  height: 100%;
+  padding: 8px 25px;
+  text-decoration: none;
+  width: 100%;
+}
+.bb-nav li:first-of-type {
+  border-top-left-radius: 10px;
+}
+@media screen and (max-width: 768px) {
+  .bb-nav li:first-of-type {
+    border-top-right-radius: 10px;
+  }
+}
 @media screen and (max-width: 768px) {
   .bb-nav li {
     display: block;
@@ -98,15 +102,25 @@
     width: 100%;
   }
 }
-.bb-nav li a {
-  color: #ffffff;
-}
-.bb-body {
+.bb-nav .active {
   background-color: #e5e5e5;
-  border: 1px solid #1a4663;
-  border-radius: 0 0 10px 10px;
-  margin: 0;
-  padding: 1em;
+}
+.bb-nav .active a {
+  color: #1a4663;
+}
+@media screen and (max-width: 768px) {
+  .bb-nav .active a:before,
+  .bb-nav .active a:after {
+    font-weight: 100;
+  }
+  .bb-nav .active a:before {
+    content: "\25ba";
+    float: left;
+  }
+  .bb-nav .active a:after {
+    content: "\25c4";
+    float: right;
+  }
 }
 .bb-form {
   font-size: 16px;
@@ -125,6 +139,20 @@
   font-size: 16px;
   margin-bottom: 0;
   vertical-align: middle;
+}
+@media screen and (max-width: 768px) {
+  .bb-form input[type="text"]::-webkit-input-placeholder {
+    font-size: 13.6px;
+  }
+  .bb-form input[type="text"]::-moz-placeholder {
+    font-size: 13.6px;
+  }
+  .bb-form input[type="text"]:-ms-input-placeholder {
+    font-size: 13.6px;
+  }
+  .bb-form input[type="text"]::placeholder {
+    font-size: 13.6px;
+  }
 }
 .bb-body input,
 .bb-body button,
@@ -158,6 +186,9 @@
 .bb-options {
   margin: 0;
   padding: 0;
+}
+.bb-options:first-of-type {
+  margin-top: 15px;
 }
 @media screen and (max-width: 768px) {
   .bb-options {
@@ -196,11 +227,12 @@
 }
 @media screen and (max-width: 768px) {
   .bb-opt {
-    margin-left: 0.5em;
+    padding-left: 10px;
   }
 }
 .bb-opt label {
   cursor: pointer;
+  padding-left: 1px;
 }
 label {
   margin-right: 5px;

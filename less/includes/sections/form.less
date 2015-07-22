@@ -1,11 +1,3 @@
-.bb-body {    
-  background-color: @active-content-bg-color;
-  border: 1px solid @theme-primary;
-  border-radius: 0 0 @box-border-radius @box-border-radius;
-  margin: 0;
-  padding: 1em;
-}
-
 .bb-form {
   font-size: @base-font-size;
 
@@ -21,9 +13,15 @@
   }
 
   input[type="text"] {
-    font-size: 16px;
+    font-size: @base-font-size;
     margin-bottom: 0;
     vertical-align: middle;
+
+    .display-small({
+      &::placeholder {
+        font-size: @base-font-size * .85;
+      }
+    })
   }
 }
 
@@ -61,6 +59,10 @@
   margin: 0;
   padding: 0;
   
+  &:first-of-type {
+    margin-top: 15px;
+  }
+
   .display-small({
     margin-top: @form-element-margin;
   });
@@ -96,17 +98,19 @@
   }
   
   .display-small({
-    margin-left: @form-element-margin * 2;  
+    padding-left: 10px;
   });
 
   label {
     cursor: pointer;
+    // labels need a nudge, or they'll cut off radio/checkboxes
+    padding-left: 1px;
   }
 }
 
 label {
   margin-right: 5px;
-  
+
   input[type="checkbox"],
   input[type="radio"] {
     margin: 0;

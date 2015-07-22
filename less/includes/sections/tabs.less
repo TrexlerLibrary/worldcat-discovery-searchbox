@@ -1,47 +1,68 @@
-.bb-nav a {
-  display: inline-block;
-  height: 100%;
-  padding: @tab-padding;
-  text-decoration: none; 
-  width: 100%;
-}
+.bb-nav {
+  ul {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+ 
+  li {
+    background-color: @tab-inactive-bg-color;
+    border: 1px solid @tab-inactive-bg-color;
+    border-bottom: 1px solid transparent;
+    display: inline-block;
+    font-size: 18px;
+    margin: 0;
 
-.bb-nav .active {
-  background-color: @active-content-bg-color;
-}
-.bb-nav .active a {
-  color: @tab-active-link-color;
-}
+    a {
+      color: @tab-inactive-link-color;
+      display: inline-block;
+      font-size: 1em;
+      height: 100%;
+      padding: 8px 25px;
+      text-decoration: none; 
+      width: 100%;
+    }
 
-.bb-nav ul {
-  background-color: #fff;
-  margin: 0;
-  padding: 0;
-}
+    &:first-of-type {
+      border-top-left-radius: @box-border-radius;
 
-.bb-nav li:first-of-type {
-  border-top-left-radius: @box-border-radius;
-  
-  .display-small({
-    border-top-right-radius: @box-border-radius;
-  });
-}
+      .display-small({
+        border-top-right-radius: @box-border-radius;
+      });
+    }
 
-.bb-nav li {
-  background-color: @tab-inactive-bg-color;
-  border: 1px solid @tab-inactive-bg-color;
-  border-bottom: 1px solid transparent;
-  display: inline-block;
-  font-size: 18px;
-  margin: 0;
+    .display-small({
+      display: block;
+      text-align: center;
+      width: 100%;
+    });
+  }
 
-  .display-small({
-    display: block;
-    text-align: center;
-    width: 100%;
-  });
-}
+  .active {
+    background-color: @active-content-bg-color;
 
-.bb-nav li a {
-  color: @tab-inactive-link-color;
+    a {
+      color: @tab-active-link-color;
+
+      .display-small({
+        &:before, &:after {
+          font-weight: 100;
+        }
+
+        &:before {
+          // content: ">";
+          // content: "\21e2"; // thin arrow right
+          content: "\25ba";    // thick arrow-head right
+          float: left;
+        }
+
+        &:after {
+          // content: "<";
+          // content: "\21e0"; // thin arrow left
+          content: "\25c4";    // thick arrow-head left
+          float: right;
+        }
+      });
+    }
+  }
 }
