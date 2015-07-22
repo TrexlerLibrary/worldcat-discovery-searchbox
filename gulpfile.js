@@ -7,14 +7,10 @@ var minifyCss = require('gulp-minify-css')
 var autoprefixer = require('gulp-autoprefixer')
 var plumber = require('gulp-plumber')
 
-var lessOpts = {
-  paths: [path.join(__dirname, 'less', 'includes')]
-}
-
 gulp.task('lessify', function () {
   gulp.src('./less/main.less')
       .pipe(plumber())
-      .pipe(less(lessOpts))
+      .pipe(less())
       .pipe(autoprefixer())
       .pipe(rename(function(f) {f.basename = 'beetbox'}))
       .pipe(gulp.dest('./css'))
