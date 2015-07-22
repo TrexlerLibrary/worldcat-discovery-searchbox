@@ -3,7 +3,7 @@
   font-size: 16px;
 }
 .beetbox {
-  background-color: #fff;
+  background-color: #ffffff;
   border: 1px solid #1a4663;
   border-radius: 10px;
   font-family: 'Arial', sans-serif;
@@ -12,13 +12,6 @@
 }
 .beetbox-shadow {
   box-shadow: 0 0 5px 3px #1a4663;
-}
-.bb-body {
-  background-color: #e5e5e5;
-  border: 1px solid #1a4663;
-  border-radius: 0 0 10px 10px;
-  margin: 0;
-  padding: 1em;
 }
 .bb-content {
   background-color: #fff;
@@ -96,8 +89,14 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .bb-nav li:last-of-type {
+    border-bottom: 1px dashed #1a4663;
+  }
+}
+@media screen and (max-width: 768px) {
   .bb-nav li {
     display: block;
+    overflow-y: hidden;
     text-align: center;
     width: 100%;
   }
@@ -122,37 +121,25 @@
     float: right;
   }
 }
-.bb-form {
+.bb-body {
+  background-color: #e5e5e5;
+  border: 1px solid #1a4663;
+  border-radius: 0 0 10px 10px;
+  color: #1a4663;
   font-size: 16px;
+  margin: 0;
+  padding: 1em;
+  padding-top: 1.25em;
 }
-.bb-form select,
-.bb-form button {
+.bb-body select,
+.bb-body button {
   border-radius: 2px;
   margin-bottom: 0;
 }
-.bb-form select:focus,
-.bb-form button:focus {
+.bb-body select:focus,
+.bb-body button:focus {
   box-shadow: 0 0 5px 2px #53a0d2;
   outline: none;
-}
-.bb-form input[type="text"] {
-  font-size: 16px;
-  margin-bottom: 0;
-  vertical-align: middle;
-}
-@media screen and (max-width: 768px) {
-  .bb-form input[type="text"]::-webkit-input-placeholder {
-    font-size: 13.6px;
-  }
-  .bb-form input[type="text"]::-moz-placeholder {
-    font-size: 13.6px;
-  }
-  .bb-form input[type="text"]:-ms-input-placeholder {
-    font-size: 13.6px;
-  }
-  .bb-form input[type="text"]::placeholder {
-    font-size: 13.6px;
-  }
 }
 .bb-body input,
 .bb-body button,
@@ -161,26 +148,44 @@
 }
 .bb-body input[type="text"] {
   border: 1px solid #1a4663;
+  font-size: 16px;
   font-weight: 100;
+  margin-bottom: 0;
   padding: 5px;
+  vertical-align: middle;
 }
 @media screen and (max-width: 768px) {
   .bb-body input[type="text"] {
     margin: 0.5em auto;
     width: 100%;
   }
+  .bb-body input[type="text"]::-webkit-input-placeholder {
+    font-size: 13px;
+  }
+  .bb-body input[type="text"]::-moz-placeholder {
+    font-size: 13px;
+  }
+  .bb-body input[type="text"]:-ms-input-placeholder {
+    font-size: 13px;
+  }
+  .bb-body input[type="text"]::placeholder {
+    font-size: 13px;
+  }
 }
-.bb-btn {
-  background-color: #35c86f;
-  border: 1px solid #000000;
-  color: #ffffff;
-  cursor: pointer;
-  vertical-align: bottom;
+.bb-body select {
+  border: 1px solid #1a4663;
+  display: inline-block;
+  height: 30px;
+  margin-bottom: 0;
+  vertical-align: middle;
 }
 @media screen and (max-width: 768px) {
-  .bb-btn {
+  .bb-body select {
     display: block;
     width: 100%;
+  }
+  .bb-body select + button {
+    margin-top: 0.5em;
   }
 }
 .bb-options {
@@ -198,6 +203,41 @@
 .bb-options label {
   cursor: pointer;
 }
+.bb-opt {
+  list-style-type: none;
+  margin-right: 7px;
+}
+@media screen and (max-width: 768px) {
+  .bb-opt {
+    padding-left: 10px;
+  }
+}
+.bb-opt label {
+  cursor: pointer;
+  margin-right: 5px;
+  padding-left: 1px;
+}
+.bb-opt label input[type="checkbox"],
+.bb-opt label input[type="radio"] {
+  margin: 0;
+  vertical-align: middle;
+}
+.bb-opt-header {
+  float: left;
+  font-weight: bold;
+  text-align: right;
+  margin-right: 1em;
+  margin-top: 6px;
+  width: 5em;
+  vertical-align: baseline;
+}
+@media screen and (max-width: 768px) {
+  .bb-opt-header {
+    float: none;
+    text-align: left;
+    width: auto;
+  }
+}
 .bb-opt,
 .bb-opt-header {
   display: inline-block;
@@ -209,53 +249,17 @@
     display: block;
   }
 }
-.bb-opt {
-  list-style-type: none;
-  margin-right: 7px;
-}
-.bb-opt-header {
-  font-weight: bold;
-  text-align: right;
-  margin-right: 1em;
-  width: 10em;
-}
-@media screen and (max-width: 768px) {
-  .bb-opt-header {
-    text-align: left;
-    width: auto;
-  }
-}
-@media screen and (max-width: 768px) {
-  .bb-opt {
-    padding-left: 10px;
-  }
-}
-.bb-opt label {
+.bb-btn {
+  background-color: #35c86f;
+  border: 1px solid #000000;
+  color: #ffffff;
   cursor: pointer;
-  padding-left: 1px;
-}
-label {
-  margin-right: 5px;
-}
-label input[type="checkbox"],
-label input[type="radio"] {
-  margin: 0;
-  vertical-align: middle;
-}
-.bb-form select {
-  border: 1px solid #1a4663;
-  display: inline-block;
-  height: 30px;
-  margin-bottom: 0;
-  vertical-align: middle;
+  vertical-align: bottom;
 }
 @media screen and (max-width: 768px) {
-  .bb-form select {
+  .bb-btn {
     display: block;
     width: 100%;
-  }
-  .bb-form select + button {
-    margin-top: 0.5em;
   }
 }
 .bb-help-text {
@@ -265,7 +269,7 @@ label input[type="radio"] {
   padding: .25em;
 }
 .bb-footer {
-  color: #666;
+  color: #1a4663;
   padding: 1em;
 }
 .bb-footer ol,
