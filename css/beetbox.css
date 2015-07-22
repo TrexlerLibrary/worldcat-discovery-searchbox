@@ -124,6 +124,7 @@
 .bb-form input[type="text"] {
   font-size: 16px;
   margin-bottom: 0;
+  vertical-align: middle;
 }
 .bb-body input,
 .bb-body button,
@@ -201,8 +202,12 @@
 .bb-opt label {
   cursor: pointer;
 }
+label {
+  margin-right: 5px;
+}
 label input[type="checkbox"],
 label input[type="radio"] {
+  margin: 0;
   vertical-align: middle;
 }
 .bb-form select {
