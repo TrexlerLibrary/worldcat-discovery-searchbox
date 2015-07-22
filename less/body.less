@@ -1,0 +1,68 @@
+.bb-body {
+  background-color: @active-content-bg-color;
+  border: 1px solid @theme-primary;
+  border-radius: 0 0 @box-border-radius @box-border-radius;
+  color: @theme-primary;
+  font-size: @base-font-size;
+  margin: 0;
+  padding: 1em;
+  padding-top: 1.25em;
+
+  select,
+  button {
+    border-radius: @form-element-border-radius;
+    margin-bottom: 0;
+
+    &:focus {
+      box-shadow: 0 0 5px 2px lighten(@theme-primary, 33%);
+      outline: none;
+    }
+  }
+
+  input, button, select {
+    height: @element-base-height;
+  }
+
+  input[type="text"] {
+    border: 1px solid @theme-primary;
+    font-size: @base-font-size;
+    font-weight: 100;
+    margin-bottom: 0;
+    padding: 5px;
+    vertical-align: middle;
+
+    .display-small({
+      margin: (@form-element-margin * 2) auto;
+      width: 100%;
+
+      &::placeholder {
+        font-size: floor(@base-font-size * .85);
+      }
+    })
+  }
+
+  select {
+    border: 1px solid @theme-primary;
+    display: inline-block;
+    height: 30px;
+    margin-bottom: 0;
+    vertical-align: middle;
+
+    .display-small({
+      display: block;
+      width: 100%;
+
+      + button {
+        // the text input is providing @form-element-margin
+        // for top and bottom. to make up this difference
+        // when only using a select and a button, we'll add
+        // it to the top of the button, since that's easily
+        // target-able.
+        //
+        // multiplying by 2 adds margin that would have
+        // come from bottom of the select element
+        margin-top: @form-element-margin * 2;
+      }
+    });
+  }
+}

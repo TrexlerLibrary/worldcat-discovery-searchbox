@@ -1,0 +1,63 @@
+.bb-options {
+  margin: 0;
+  padding: 0;
+  
+  &:first-of-type {
+    margin-top: 15px;
+  }
+
+  .display-small({
+    margin-top: @form-element-margin;
+  });
+
+  label {
+    cursor: pointer;
+  }
+}
+
+.bb-opt {
+  list-style-type: none;
+  margin-right: 7px;
+  
+  .display-small({
+    padding-left: 10px;
+  });
+
+  label {
+    cursor: pointer;
+    margin-right: 5px;
+    // labels need a nudge, or they'll cut off radio/checkboxes
+    padding-left: 1px;
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      margin: 0;
+      vertical-align: middle;
+    }
+  }
+}
+
+.bb-opt-header { 
+  float: left;
+  font-weight: bold; 
+  text-align: right;
+  margin-right: 1em;
+  margin-top: 6px;
+  width: @opt-header-width;
+  vertical-align: baseline;
+
+  .display-small({
+    float: none;
+    text-align: left;
+    width: auto;  
+  });
+}
+
+.bb-opt, .bb-opt-header {
+  display: inline-block;
+  vertical-align: middle;
+
+  .display-small({
+    display: block;
+  });
+}

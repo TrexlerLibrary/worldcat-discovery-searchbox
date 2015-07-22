@@ -3,6 +3,7 @@
     background-color: #fff;
     margin: 0;
     padding: 0;
+
   }
  
   li {
@@ -31,8 +32,15 @@
       });
     }
 
+    &:last-of-type {
+      .display-small({
+        border-bottom: 1px dashed @theme-primary;
+      });
+    }
+
     .display-small({
       display: block;
+      overflow-y: hidden;
       text-align: center;
       width: 100%;
     });
